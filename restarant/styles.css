@@ -1,0 +1,356 @@
+/* Biden's Patriotic & Classic Palette */
+
+:root {
+    --color-primary: #0A2E65; /* A deep, rich royal blue */
+    --color-secondary: rgb(219, 3, 35); /* A slightly muted, elegant red */
+    --color-background: #F8F8F8; /* A clean, off-white for text/backgrounds */
+    --secondary-background: #dddddd; /*A Slight Off-White for Backgrounds*/
+    --accents-color: #FFD700; /* A classic gold for accents */
+    --text-color: #555555; /* A dark gray for body text */
+    --font-primary: 'Georgia', serif;
+    --font-secondary: 'Helvetica Neue', Arial, sans-serif;
+}
+    
+/*====================================================
+GENERAL STYLES
+=====================================================*/
+body {
+    background-color: var(--color-background);
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+    
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+    
+h1, h2 {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+}
+    
+/*====================================================
+HEADER AND NAVIGATION
+=====================================================*/
+header {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+    
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--color-background);
+}
+    
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+    
+nav a {
+    color: var(--color-background);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+    
+nav a:hover {
+    color: var(--accents-color);
+}
+/*===================================================
+FEATURED HIGHLIGHTS SECTION
+===================================================*/
+
+#featured-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}
+
+#featured-highlights h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 24px;
+  grid-column: 1 / -1;
+}
+
+/* Removes default list styling. */
+#featured-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: contents;
+}
+
+/* Styles for each individual highlight box. */
+#featured-highlights li {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+#featured-highlights li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+#featured-highlights li::before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 250px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+  .breakfast-in-bed::before {
+    background-image: url('images/nursing-home-food.jpg');
+  }
+  .cup-of-joe::before {
+    background-image: url('images/cup-of-joe.jpg');
+  }
+  .meeting-rooms::before {
+    background-image: url('images/bidens-new-groove.png');
+  }
+
+/* Style for the paragraph text inside the box. */
+#featured-highlights li p {
+  padding: 16px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #555;
+  margin: 0;
+}
+
+/*===================================================
+RESTUARANT HERO 
+====================================================*/
+#restuarant-hero {
+    text-align: center;
+    background-image: url("/images/nursing-home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+    
+#restuarant-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--accents-color); 
+}
+
+#restuarant-hero a {
+    text-decoration: none;
+}
+
+#restuarant-hero p {
+    font-style: italic;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--accents-color);
+    text-shadow: 2px 2px 4px var(--color-primary);
+    font-weight: 700;
+}
+
+#hero-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+#hero-button p:first-of-type {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero-button p:last-of-type {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 700;
+    background-color: var(--accents-color);
+    color: var(--color-primary);
+    padding: 1.25rem 3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+}
+
+#hero-button p:last-of-type:hover {
+    background-color: transparent;
+    color: var(--accents-color);
+    border-color: var(--accents-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/*====================================================
+ABOUT US HERO IMAGE
+====================================================*/
+#about-hero {
+    text-align: center;
+    background-image: url("/images/hero-image.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    opacity: 0.9;
+    padding: 6rem 3rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+    
+#about-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--accents-color); 
+}
+
+/*====================================================
+ABOUT US - OUR STORY
+=====================================================*/
+#Our-Story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Our-Story h2{
+    border-bottom: 2px solid var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.interior-box {
+    display: flex;
+    gap: 10px;
+    background-color: var(--secondary-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interior-box img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.interior-box p {
+    background-color: var(--color-background);
+    border-radius: 12px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.interior-box .mission-img {
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/*====================================================
+HIGHLIGHTS AND REVIEWS SECTIONS
+=====================================================*/
+#featured-highlights, #Reviews {
+    background-color: var(--secondary-background);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    
+#featured-highlights h2, #Reviews h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+}
+    
+#featured-highlights p, #Reviews p {
+    margin: 0.5rem 0;
+}   
+    
+/*====================================================
+FOOTER AND SOCIAL MEDIA IMAGES
+=====================================================*/
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 2rem;
+    text-align: center;
+}
+
+.low-nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    
+.low-nav-bar li {
+    margin: 0.5rem 0;
+}
+    
+.low-nav-bar li img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+}
+    
+/*====================================================
+RESPONSIVE DESIGN
+=====================================================*/
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    #restuarant-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    #restuarant-hero p {
+        font-size: 1.2rem;
+    }
+}
