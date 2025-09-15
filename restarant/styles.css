@@ -92,7 +92,6 @@ FEATURED HIGHLIGHTS SECTION
   grid-column: 1 / -1;
 }
 
-/* Removes default list styling. */
 #featured-highlights ul {
   list-style: none;
   padding: 0;
@@ -302,7 +301,19 @@ HIGHLIGHTS AND REVIEWS SECTIONS
 #featured-highlights p, #Reviews p {
     margin: 0.5rem 0;
 }   
-    
+/*====================================================
+MENU ITEMS LIST
+=====================================================*/
+#menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction:column;
+}
+#menu p {
+    font-weight: bold;
+}
+
 /*====================================================
 FOOTER AND SOCIAL MEDIA IMAGES
 =====================================================*/
